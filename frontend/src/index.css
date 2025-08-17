@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans m-0 p-0 box-border;
+}
+
+/* index.css */
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+.text-slider {
+  @apply inline-block overflow-hidden border-r-2 border-white;
+  animation: typing 10s steps(40, end), blink-caret 0.75s step-end infinite;
+}
